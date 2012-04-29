@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestMobile</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<br/>
+<%= link_to "Simulate regular access to custom page", root_path %><br/>
+<%= link_to "Simulate mobile access to custom page", root_path(:mobile=>"true") %><br/>
+<br/>
+<%= link_to "Simulate regular access to fallthrough page", fallthrough_path %><br/>
+<%= link_to "Simulate mobile access to fallthrough page", fallthrough_path(:mobile=>"true") %><br/>
+
+</body>
+</html>
